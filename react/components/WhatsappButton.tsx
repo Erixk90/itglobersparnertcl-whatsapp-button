@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'
+import styles from "./styles.css"
 
 type Props = {
     logos: string  // whatsapp.png
@@ -13,7 +14,7 @@ const WhatsappButton = ({ logos, phone, message, width, height }: Props) => {
         const formattedMessage = message.replace(/ /g, "%20")
         return(
         <>
-        <div className='fixed bottom-2 right-2 flex flexColumn'>
+        <div className={` fixed bottom-2 right-2 flex flexColumn ${styles.containerWhatsappButton}`}>
             <a 
                 href={`https://wa.me/${phone}?text=${formattedMessage}`}
                 target="_blank"
